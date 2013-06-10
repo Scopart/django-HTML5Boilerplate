@@ -1,0 +1,74 @@
+
+$selection-background: #b3d4fc;
+$a-color: #fff;
+$a-color-hover: #ccc;
+$h-color: #222222;
+$hr-color: #ccc;
+
+/** Typographie **/
+$base-font-size: 16px;
+$font-family: Helvetica, Helvetica Neue, Arial;
+$alternative-font-family: Helvetica, Helvetica Neue, Arial;
+$font-color: #444444;
+
+@mixin font-size-rem($rem, $base:$base-font-size) {
+    font-size: floor($base * $rem);
+    font-size: #{$rem}rem;
+}
+
+/** Media query **/
+@mixin breakpoint($point) {
+    /*
+     * 480px
+     * LARGER MOBILE DEVICES
+     * This is for devices like the Galaxy Note or something that's
+     * larger than an iPhone but smaller than a tablet.
+     */
+    @if $point == larger-mobile {
+        @media only screen and (min-width: 30em) { @content; }
+    }
+    /*
+     * 600px
+     */
+    @else if $point == small-tablet {
+        @media only screen and (min-width: 37.5em) { @content; }
+    }
+    /*
+     * 768px
+     * TABLET & SMALLER LAPTOPS
+     * This is the average viewing window. So Desktops, Laptops, and
+     * in general anyone not viewing on a mobile device. Here's where
+     * you can add resource intensive styles.
+     */
+    @else if $point == tablet {
+        @media only screen and (min-width: 48em) { @content; }
+    }
+    /*
+     * 960
+     * DESKTOP
+     * This is the average viewing window. So Desktops, Laptops, and
+     * in general anyone not viewing on a mobile device. Here's where
+     * you can add resource intensive styles.
+     */
+    @else if $point == desktop {
+        @media only screen and (min-width: 60em)  { @content; }
+    }
+    /*
+     * 1200
+     * LARGE VIEWING SIZE
+     * This is for the larger monitors and possibly full screen viewers.
+     */
+    @else if $point == larger-desktop {
+        @media only screen and (min-width: 75em)  { @content; }
+    }
+    /*
+     * High resolution
+     * RETINA (2x RESOLUTION DEVICES)
+     * This applies to the retina iPhone (4s) and iPad (2,3) along with
+     * other displays with a 2x resolution. You can also create a media
+     * query for retina AND a certain size if you want.
+     */
+    @else if $point == retina {
+        @media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (min--device-pixel-ratio:1.5) { @content; }
+    }
+}

@@ -1,0 +1,46 @@
+body {
+    line-height: 1.5;
+    font-family: $font-family;
+    font-size: 1rem;
+    @include font-size-rem(1);
+    color: $font-color;
+    @include breakpoint(desktop) {
+        @include font-size-rem(1.2);
+    }
+}
+
+.wrapper-optimize {
+    max-width: 480px;
+    margin: 0 auto;
+
+    @include breakpoint(desktop) {
+        max-width: 580px;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+.like-h1, .like-h2, .like-h3, .like-h4, .like-h5, .like-h6 {
+    font-family: $alternative-font-family;
+    line-height: 1.1;
+    color: $h-color;
+}
+
+h1 {
+    font-weight: 900;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2, h3, h4, h5 {
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
+}
+
+abbr {
+    font-variant: small-caps;
+}
