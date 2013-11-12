@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+Print styles.
+Inlined to avoid required HTTP connection: h5bp.com/r
+========================================================================== */
 
 @media print {
     * {
@@ -24,8 +25,8 @@
     }
 
     /*
-     * Don't show links for images, or javascript/internal links
-     */
+    * Don't show links for images, or javascript/internal links
+    */
 
     .ir a:after,
     a[href^="javascript:"]:after,

@@ -2,7 +2,7 @@
 
 # Set this to the root of your project when deployed:
 http_path = "site_media/static/"
-css_dir = "../{{ project_name }}/static/css"
+css_dir = "../project_name/static/css"
 sass_dir = "."
 images_dir = "img"
 javascripts_dir = "js"
