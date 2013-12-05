@@ -8,12 +8,12 @@
             "is_active": true,
             "is_superuser": true,
             "is_staff": true,
-            "last_login": "2013-05-30T14:18:13.283Z",
+            "last_login": "2013-05-30T14:18:13.283",
             "groups": [],
             "user_permissions": [],
             "password": "pbkdf2_sha256$10000$JJkbveev1wJe$oLRMw13X0B0fXpBx8t/Xy2GKlEZlFMK45d9yzc05Gzc=",
             "email": "admin@scopart.fr",
-            "date_joined": "2013-05-30T14:18:13.283Z"
+            "date_joined": "2013-05-30T14:18:13.283"
         }
     }
 ]
