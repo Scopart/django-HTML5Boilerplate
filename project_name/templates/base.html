@@ -12,11 +12,10 @@
         <meta name="description" content="{% block description %}{% endblock description %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Scopart">
-        <meta name="webauthor" content="Scopart">
-        <meta name="copyright" content="Scopart">
-        <meta name="generator" content="Django">
+        <meta name="webauthor" content="Scopart, contact@scopart.fr">
+        <meta name="copyright" content="Scopart, contact@scopart.fr">
         <meta name="language" content="{{ LANGUAGE_CODE }}">
-        <meta name="Content-Language" content="fr">
+        <meta name="Content-Language" content="{{ LANGUAGE_CODE }}">
         {% block extra_meta %}{% endblock extra_meta %}
         {% endblock meta %}
 
@@ -42,7 +41,6 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         {% block body %}
-
         <div class="header-container">
             {% block header-container %}
             <header class="wrapper clearfix">
@@ -64,7 +62,7 @@
 
         <div class="main-container">
             {% block main-container %}
-            <div class="main wrapper clearfix">
+            <div id="main" class="wrapper clearfix">
                 {% block main %}
                 {% endblock main %}
             </div> <!-- #main -->
@@ -80,6 +78,7 @@
             </footer>
             {% endblock footer-container %}
         </div>
+        {% endblock body %}
 
         {% block body_script %}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -99,7 +98,5 @@
         </script>
         {% endblock google-analytics %}
         {% endblock body_script %}
-
-        {% endblock body %}
     </body>
 </html>
