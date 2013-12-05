@@ -8,24 +8,16 @@
 ## Installation ##
 ### Creating the environment ###
 Create a virtual python environment for the project.
-If you're not using virtualenv or virtualenvwrapper you may skip this step.
+If you're not using virtualenv you may skip this step.
 
-#### For virtualenvwrapper ####
-```bash
-mkvirtualenv --no-site-packages {{ project_name }}-env
-```
-
-#### For virtualenv ####
+#### Virtualenv ####
 ```bash
 virtualenv --no-site-packages venv
 source venv/bin/activate
 ```
-
-### Clone the code ###
-Obtain the url to your git repository.
-
+or if using global packages (eg: mysql driver)
 ```bash
-git clone <URL_TO_GIT_RESPOSITORY> {{ project_name }}
+virtualenv --system-site-packages venv
 ```
 
 ### Install requirements ###
@@ -35,6 +27,11 @@ pip install -r requirements.txt
 ```
 
 ### Configure project ###
+For development environement
+```bash
+vim {{ project_name }}/settings_dev.py
+```
+For production environement
 ```bash
 vim {{ project_name }}/settings.py
 ```
@@ -42,6 +39,11 @@ vim {{ project_name }}/settings.py
 ### Sync database ###
 ```bash
 python manage.py syncdb
+```
+
+### Load initial data ###
+```bash
+python manage.py loaddata auth
 ```
 
 ## Running ##
