@@ -31,8 +31,8 @@ LANGUAGE_CODE = 'fr-FR'
 SITE_ID = 1
 
 USE_I18N = True
-USE_L10N = True
-USE_TZ = True
+#USE_L10N = True
+#USE_TZ = True
 
 MEDIA_ROOT = os.path.join(PACKAGE_ROOT, 'site_media', 'media')
 MEDIA_URL = '/site_media/media/'
