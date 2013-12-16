@@ -1,15 +1,37 @@
+/** Variables **/
+$base-font-size: 100%;
+$base-line-height: 1.5;
+$font-family: Helvetica, Helvetica Neue, Arial;
+$alternative-font-family: Helvetica, Helvetica Neue, Arial;
+$font-color: #444444;
+$selection-background: #b3d4fc;
+$h-color: #222222;
+$a-color: #fff;
+$a-color-hover: #ccc;
+
+/** Mixins **/
+@function calculate-rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculate-rem($size);
+}
+
+/** CSS **/
 html {
     font-size: $base-font-size;
 }
 
 body {
-    line-height: 1.5;
+    line-height: $base-line-height;
     font-family: $font-family;
-    font-size: 1rem;
-    @include font-size-rem(1);
+    @include font-size(16px);
     color: $font-color;
     @include breakpoint(desktop) {
-        @include font-size-rem(1.2);
+        @include font-size(19px);
     }
 }
 
@@ -31,6 +53,10 @@ h1, h2, h3, h4, h5, h6,
     font-family: $alternative-font-family;
     line-height: 1.1;
     color: $h-color;
+
+    &.top {
+        margin-top: 0;
+    }
 }
 
 h1, .h1 {
@@ -39,36 +65,52 @@ h1, .h1 {
     margin-bottom: 1em;
 }
 
-h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+h2, h3, h4, h5, .h2, .h3, .h4, .h5 {
     font-weight: 700;
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 }
 
 h1, .h1 {
-    @include font-size-rem(2);
+    @include font-size(32px);
 }
 
 h2, .h2 {
-    @include font-size-rem(1.5);
+    @include font-size(24px);
 }
 
 h3, .h3 {
-    @include font-size-rem(1.169);
+    @include font-size(18px);
 }
 
 h4, .h4 {
-    @include font-size-rem(1);
+    @include font-size(16px);
 }
 
 h5, .h5 {
-    @include font-size-rem(.831);
+    @include font-size(13px);
 }
 
 h6, .h6 {
-    @include font-size-rem(.669);
+    @include font-size(10px);
 }
 
 abbr {
     font-variant: small-caps;
+}
+
+a, a:visited {
+    color: $a-color;
+}
+
+a:hover, a:focus {
+    color: $a-color-hover;
+}
+
+::-moz-selection {
+    background: $selection-background;
+}
+
+::selection {
+    background: $selection-background;
 }

@@ -1,19 +1,4 @@
-$selection-background: #b3d4fc;
-$a-color: #fff;
-$a-color-hover: #ccc;
-$h-color: #222222;
 $hr-color: #ccc;
-
-/** Typographie **/
-$base-font-size: 16px;
-$font-family: Helvetica, Helvetica Neue, Arial;
-$alternative-font-family: Helvetica, Helvetica Neue, Arial;
-$font-color: #444444;
-
-@mixin font-size-rem($rem, $base:$base-font-size) {
-    font-size: floor($base * $rem);
-    font-size: #{$rem}rem;
-}
 
 /** Media query **/
 @mixin breakpoint($point) {

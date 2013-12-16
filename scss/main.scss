@@ -1,26 +1,24 @@
+@import "compass/css3";
 @import "mixin";
 @import "normalize";
 @import "base";
-@import "typography";
-@import "browsehappy";
-//@import "pic";
 @import "grid";
+@import "typography";
+@import "button";
+@import "pic";
+@import "browsehappy";
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
+hr {
+    border-top: 1px solid $hr-color;
+}
 
 img {
     max-width: 100%;
 }
 
-a, a:visited {
-    color: $a-color;
-}
-
-a:hover, a:focus {
-    color: $a-color-hover;
-}
 
 .wrapper {
     width: 90%;

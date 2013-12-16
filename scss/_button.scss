@@ -1,0 +1,73 @@
+/** Examples
+
+<button>Validate</button
+<button class="large">Validate</button
+<button class="small link">Validate</button
+<a href="#" class="large btn">Validate</a>
+
+**/
+
+/** Variables **/
+$button-font: $font-family;
+$button-margin: 0px 0px 17px;
+$button-padding: 10px 20px 9px;
+$button-font-size: 16px;
+$button-background: #bbb;
+$button-background-hover: darken($button-background, 7%);
+$button-color: #fff;
+$button-color-hover: $button-color;
+
+$button-small-padding: 12px 18px 9px;
+$button-small-font-size: 13px;
+
+$button-large-padding: 12px 20px 9px;
+$button-large-font-size: 20px;
+
+$button-link-background: #fff;
+$button-link-color: $a-color;
+$button-link-color-hover: $a-color-hover;
+
+/** CSS **/
+button, .btn {
+    cursor: pointer;
+    display: inline-block;
+    font-family: $button-font;
+    line-height: normal;
+    margin: $button-margin;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: $button-padding;
+    @include font-size($button-font-size);
+    background-color: $button-background;
+    color: $button-color;
+    @include transition(background-color 300ms ease-out 0s);
+    border: medium none;
+    font-weight: normal;
+
+    &:hover, &:focus {
+        color: $button-color-hover;
+        background-color: $button-background-hover;
+        outline: 0;
+    }
+}
+
+button.small, .btn.small {
+    padding: $button-small-padding;
+    @include font-size($button-small-font-size);
+}
+
+button.large, .btn.large {
+    padding: $button-large-padding;
+    @include font-size($button-large-font-size);
+}
+
+button.link, .btn.link {
+    color: $button-link-color;
+    background-color: $button-link-background;
+
+    &:hover, &:focus {
+        color: $button-link-color-hover;
+    }
+}
