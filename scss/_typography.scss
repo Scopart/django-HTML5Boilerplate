@@ -5,6 +5,7 @@ $font-family: Helvetica, Helvetica Neue, Arial;
 $alternative-font-family: Helvetica, Helvetica Neue, Arial;
 $font-color: #444444;
 $selection-background: #b3d4fc;
+$selection-color: #222;
 $h-color: #222222;
 $a-color: #fff;
 $a-color-hover: #ccc;
@@ -109,8 +110,10 @@ a:hover, a:focus {
 
 ::-moz-selection {
     background: $selection-background;
+    color: $selection-color;
 }
 
 ::selection {
     background: $selection-background;
+    color: $selection-color;
 }
