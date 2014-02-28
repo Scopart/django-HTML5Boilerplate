@@ -1,40 +1,29 @@
-/** Variables **/
-$caption-color: #666;
-$caption-margin: 4px 0 10px;
-$caption-font-family: Verdana, Arial, sans-serif;
-$caption-font-size: 13px;
-
-$frame-border: 10px solid #fff;
-$frame-shadow: 0 1px 5px #000;
-/** Mixins **/
-
 /** CSS **/
 .pic {
     margin-top: 4px;
+    &.left {
+        float: left;
+        margin-right: 20px;
+    }
+    &.right {
+        float: right;
+        margin-left: 20px;
+    }
+    /* img floated right within text */
+    &.right.inset {
+        margin: 0 120px 0 20px;
+    }
+    /* img floated left within text */
+    &.left.inset {
+        margin-left: 230px;
+    }
 }
-
 .pic p, .caption {
+    @include font-size($caption-font-size);
     margin: $caption-margin;
     color: $caption-color;
-    @include font-size($caption-font-size);
     font-family: $caption-font-family;
     line-height: 1;
-}
-.pic.left {
-    float: left;
-    margin-right: 20px;
-}
-.pic.right {
-    float: right;
-    margin-left: 20px;
-}
-/* img floated right within text */
-.pic.right.inset {
-    margin: 0 120px 0 20px;
-}
-/* img floated left within text */
-.pic.left.inset {
-    margin-left: 230px;
 }
 .one {
     width: 10%;
@@ -61,8 +50,8 @@ $frame-shadow: 0 1px 5px #000;
     width: 80%;
 }
 .frame {
-    border: $frame-border;
     @include box-shadow($frame-shadow);
+    border: $frame-border;
 }
 .solo img {
     margin-bottom: 20px;

@@ -1,0 +1,81 @@
+/****************/
+/** typography **/
+/****************/
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$font-family: Helvetica, Helvetica Neue, Arial;
+$alternative-font-family: Helvetica, Helvetica Neue, Arial;
+$font-color: #444444;
+$selection-background: #b3d4fc;
+$selection-color: #222;
+$h-color: #222222;
+$a-color: #fff;
+$a-color-hover: #ccc;
+$hr-color: #ccc;
+
+/**********/
+/** grid **/
+/**********/
+// Defaults which you can freely override
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+
+// Set $total-width to 100% for a fluid layout
+//$total-width: gridsystem-width($columns);
+$total-width: 100%;
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// $min-width: 999999;
+// $correction: 0.5 / $min-width * 100;
+
+
+/************/
+/** button **/
+/************/
+$button-font: $font-family;
+$button-margin: 0px 0px 17px;
+$button-padding: 10px 20px 9px;
+$button-font-size: 16px;
+$button-background: #bbb;
+$button-background-hover: darken($button-background, 7%);
+$button-color: #fff;
+$button-color-hover: $button-color;
+
+$button-small-padding: 12px 18px 9px;
+$button-small-font-size: 13px;
+
+$button-large-padding: 12px 20px 9px;
+$button-large-font-size: 20px;
+
+$button-link-background: #fff;
+$button-link-color: $a-color;
+$button-link-color-hover: $a-color-hover;
+
+
+/**********/
+/** tabs **/
+/**********/
+$tabs-navigation-padding: 10px !default;
+$tabs-navigation-bg-color: #bbb !default;
+$tabs-navigation-hover-bg-color: darken($tabs-navigation-bg-color, 5%) !default;
+$tabs-navigation-active-bg-color: darken($tabs-navigation-bg-color, 10%);
+$tabs-navigation-border: 1px solid $tabs-navigation-active-bg-color;
+$tabs-navigation-font-color: #fff !default;
+$tabs-navigation-active-font-color: #fff !default;
+$tabs-navigation-font-size: 16px !default;
+$tabs-navigation-font-family: $font-family !default;
+$tabs-content-margin-bottom: 24px !default;
+$tabs-content-padding: 10px !default;
+
+
+/*********/
+/** pic **/
+/*********/
+$caption-color: #666;
+$caption-margin: 4px 0 10px;
+$caption-font-family: Verdana, Arial, sans-serif;
+$caption-font-size: 13px;
+
+$frame-border: 10px solid #fff;
+$frame-shadow: 0 1px 5px #000;

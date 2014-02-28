@@ -8,19 +8,6 @@
     <div id="tab-2"></div>
 </div>
 **/
-/** Variables **/
-$tabs-navigation-padding: 10px !default;
-$tabs-navigation-bg-color: #bbb !default;
-$tabs-navigation-hover-bg-color: darken($tabs-navigation-bg-color, 5%) !default;
-$tabs-navigation-active-bg-color: darken($tabs-navigation-bg-color, 10%);
-$tabs-navigation-border: 1px solid $tabs-navigation-active-bg-color;
-$tabs-navigation-font-color: #fff !default;
-$tabs-navigation-active-font-color: #fff !default;
-$tabs-navigation-font-size: 16px !default;
-$tabs-navigation-font-family: $font-family !default;
-
-$tabs-content-margin-bottom: 24px !default;
-$tabs-content-padding: 10px !default;
 
 /** CSS **/
 .tabs {
@@ -29,23 +16,23 @@ $tabs-content-padding: 10px !default;
 
     dd {
         position: relative;
-        margin: 0 !important;
         top: 1px;
         float: left;
+        margin: 0 !important;
         > a {
+            @include font-size($tabs-navigation-font-size);
             display: block;
-            background: $tabs-navigation-bg-color;
-            color: $tabs-navigation-font-color;
             padding-top: $tabs-navigation-padding;
             padding-right: $tabs-navigation-padding * 2;
             padding-bottom: $tabs-navigation-padding + 1px;
             padding-left: $tabs-navigation-padding * 2;
-            font-family: $tabs-navigation-font-family;
-            @include font-size($tabs-navigation-font-size);
             border-right: $tabs-navigation-border;
+            background: $tabs-navigation-bg-color;
+            color: $tabs-navigation-font-color;
+            font-family: $tabs-navigation-font-family;
             span {
-                line-height: $base-line-height;
                 display: inline-block;
+                line-height: $base-line-height;
             }
             &:last-child {
                 border-right: 0;
@@ -61,13 +48,13 @@ $tabs-content-padding: 10px !default;
             }
 
             &:before {
-                position: absolute;
-                content:"\f0d7";
-                font-family: 'FontAwesome';
-                color: #fff;
                 @include font-size(35px);
+                position: absolute;
                 top: -23px;
                 left: 44%;
+                color: #fff;
+                content:"\f0d7";
+                font-family: 'FontAwesome';
             }
         }
     }

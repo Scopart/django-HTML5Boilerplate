@@ -7,16 +7,16 @@ Helper classes
 */
 
 .ir {
-    background-color: transparent;
-    border: 0;
     overflow: hidden;
+    border: 0;
+    background-color: transparent;
 }
 
 .ir:before {
-    content: "";
     display: block;
     width: 0;
     height: 150%;
+    content: "";
 }
 
 /*
@@ -33,14 +33,14 @@ Helper classes
 */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
     width: 1px;
+    height: 1px;
+    border: 0;
 }
 
 /*
@@ -50,12 +50,12 @@ Helper classes
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
     position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
     width: auto;
+    height: auto;
 }
 
 /*
@@ -80,8 +80,8 @@ Helper classes
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
     display: table; /* 2 */
+    content: " "; /* 1 */
 }
 
 .clearfix:after {

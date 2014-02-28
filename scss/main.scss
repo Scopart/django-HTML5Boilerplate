@@ -1,11 +1,13 @@
 @import "compass/css3";
+@import "variables";
 @import "mixin";
 @import "normalize";
 @import "base";
 @import "grid";
 @import "typography";
 @import "button";
-@import "pic";
+// @import "tabs";
+// @import "pic";
 @import "browsehappy";
 
 /* ===== Initializr Styles ==================================================
@@ -15,15 +17,22 @@ hr {
     border-top: 1px solid $hr-color;
 }
 
-img {
+img.fluid {
     max-width: 100%;
 }
 
-
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    @include breakpoint(tablet){
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+    }
 }
+
+.inner-wrapper {
+    margin: 2em;
+}
+
 
 /* ===================
     ALL: Orange Theme
@@ -61,13 +70,13 @@ nav a {
     display: block;
     margin-bottom: 10px;
     padding: 15px 0;
+    background: #e44d26;
+
+    color: white;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-
-    color: white;
-    background: #e44d26;
 }
 
 nav a:hover,
@@ -92,13 +101,13 @@ nav a:hover {
 }
 
 .main aside {
-    color: white;
     padding: 0px 5% 10px;
+    color: white;
 }
 
 .footer-container footer {
-    color: white;
     padding: 20px 0;
+    color: white;
 }
 
 /* ===============
